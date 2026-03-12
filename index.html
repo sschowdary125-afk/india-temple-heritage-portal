@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India Temple Heritage & Pilgrimage Portal</title>
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>India Temple Heritage & Pilgrimage Portal</h1>
+  </header> 
+  <nav>
+  <a href="index.html">🏠 Home</a>
+  <a href="temple_details.html">🛕 Tirupati Balaji</a>
+  <a href="kashi_details.html">🛕 Kashi Vishwanath</a>
+  <a href="jaganath_details.html">🛕 Jagannath Temple</a>
+  <a href="meenakshi_details.html">🛕 Meenakshi Temple</a>
+</nav>
+
+  <section class="temple-listings">
+    <h2 class="temple-listings-heading">Temple Listings</h2>
+    <div class="temple-cards">
+      <!-- Tirupati Balaji -->
+      <div class="temple-card">
+  <a href="temple_details.html" style="text-decoration:none; color:inherit;">
+    <img src="https://media.istockphoto.com/id/1268716417/photo/misty-tirupathi.jpg?s=1024x1024&w=is&k=20&c=E_DmpNCKp4RvBzrrl89Idpm0JcdRbfVGPCmtug2LKeQ=" alt="Tirupati Balaji">
+     <h3>🛕 Tirupati Balaji</h3>
+  <p><strong>📍 Location:</strong> Andhra Pradesh</p>
+  <p><strong>🙏 Deity:</strong> Lord Venkateswara</p>
+    <p><em>Known as one of the richest and most visited temples in India.</em></p>
+
+  </a>
+</div>
+
+     
+<!-- Kashi Vishwanath -->
+      <div class="temple-card">
+  <a href="kashi_details.html" style="text-decoration:none; color:inherit;">
+    <img src="https://media.mahakumbh.in/media/2025/12/15144400/kashi-vishwanath.webp" alt="Kashi Vishwanath">
+     <h3>🛕 Kashi Vishwanath</h3>
+  <p><strong>📍 Location:</strong> Varanasi, Uttar Pradesh</p>
+  <p><strong>🙏 Deity:</strong> Lord Shiva</p>
+  <p><em>One of the twelve Jyotirlingas, revered as the spiritual heart of India.</em></p>
+
+  </a>
+</div>
+      
+<!-- Jagannath Temple -->
+      <div class="temple-card">
+  <a href="jaganath_details.html" style="text-decoration:none; color:inherit;">
+    <img src="https://thegreenfortune.com/wp-content/uploads/2025/09/download.jpeg" alt="Kashi Vishwanath">
+     <h3>🛕 Jagannath Temple</h3>
+  <p><strong>📍 Location:</strong> Puri, Odisha</p>
+  <p><strong>🙏 Deity:</strong> Lord Jagannath</p>
+  <p><em>Famous for the grand Rath Yatra, symbolizing devotion and unity.</em></p>
+
+  </a>
+</div>
+
+    
+<!-- Meenakshi Temple -->
+     <div class="temple-card">
+  <a href="meenakshi_details.html" style="text-decoration:none; color:inherit;">
+    <img src="https://www.sahyogmantratours.com/images/blogs/meenakshi-temple-20231009101928-1_crop.jpg" alt="Kashi Vishwanath">
+    <h3>🛕 Meenakshi Temple</h3>
+  <p><strong>📍 Location:</strong> Madurai, Tamil Nadu</p>
+  <p><strong>🙏 Deity:</strong> Goddess Meenakshi & Lord Sundareswarar</p>
+  <p><em>Renowned for its colorful gopurams and vibrant cultural festivals.</em></p>
+
+  </a>
+</div>
+    </div>
+  </section>
+  <section class="festival-calendar">
+  <h2>🎉 Upcoming Festivals</h2>
+
+  <!-- Controls -->
+  <div class="festival-controls">
+    <!-- Temple Filter Buttons -->
+    <div class="festival-filters">
+      <button onclick="filterFestival('all')">All</button>
+      <button onclick="filterFestival('Kashi Vishwanath')">Kashi</button>
+      <button onclick="filterFestival('Jagannath Temple')">Jagannath</button>
+      <button onclick="filterFestival('Meenakshi Temple')">Meenakshi</button>
+      <button onclick="filterFestival('Tirupati Balaji')">Balaji</button>
+    </div>
+
+    <!-- Month Dropdown -->
+    <div class="month-filter">
+      <label for="monthSelect"><strong>Filter by Month:</strong></label>
+      <select id="monthSelect" onchange="applyFilters()">
+        <option value="all">All</option>
+        <option value="March">March</option>
+        <option value="July">July</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+      </select>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="festival-search">
+      <label for="searchInput"><strong>Search Festivals:</strong></label>
+      <input type="text" id="searchInput" onkeyup="applyFilters()" placeholder="Type festival or temple name...">
+    </div>
+  </div>
+<div class="mb-3">
+  <button onclick="sortByDate()" class="btn btn-primary">Sort by Date</button>
+  <button onclick="sortByTemple()" class="btn btn-secondary">Sort by Temple</button>
+</div>
+  <!-- Festival Table -->
+  <table>
+    <tr>
+      <th>Festival</th>
+      <th>Temple</th>
+      <th>Date</th>
+      
+
+    </tr>
+    <tr data-bs-toggle="modal" data-bs-target="#shivratriModal">
+  <td><span class="festival-badge shivratri">🕉️ Maha Shivratri</span></td>
+  <td><span class="temple-icon">🏯</span> Kashi Vishwanath</td>
+  <td data-date="2026-03-06">March 6, 2026</td>
+  
+</tr>
+
+<tr data-bs-toggle="modal" data-bs-target="#rathYatraModal">
+  <td><span class="festival-badge rath">🎉 Rath Yatra</span></td>
+  <td><span class="temple-icon">⛩️</span> Jagannath Temple</td>
+  <td data-date="2026-07-07">July 7, 2026</td>
+  
+
+</tr>
+<tr data-bs-toggle="modal" data-bs-target="#navaratriModal">
+  <td><span class="festival-badge navaratri">🌸 Navaratri</span></td>
+  <td><span class="temple-icon">🏰</span> Meenakshi Temple</td>
+  <td data-date="2026-10-10">October 10, 2026</td>
+  
+
+</tr>
+<tr data-bs-toggle="modal" data-bs-target="#brahmotsavamModal">
+  <td><span class="festival-badge brahmotsavam">🙏 Brahmotsavam</span></td>
+  <td><span class="temple-icon">🛕</span> Tirupati Balaji</td>
+  <td data-date="2026-09-01">September 2026</td>
+  
+</tr>
+  </table>
+</section>
+
+<!-- Modal for Maha Shivratri -->
+<div class="modal fade" id="shivratriModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-golden">
+        <h5 class="modal-title">🕉️ Maha Shivratri</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Maha Shivratri is dedicated to Lord Shiva, celebrated with night‑long prayers and temple rituals at Kashi Vishwanath.</p>
+        <img src="https://holyvoyages.com/images/ganga-arti-evening.jpg" class="img-fluid rounded" alt="Maha Shivratri">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal for Rath Yatra -->
+<div class="modal fade" id="rathYatraModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-golden">
+        <h5 class="modal-title">🎉 Rath Yatra</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Rath Yatra is the grand chariot festival of Lord Jagannath, celebrated in Puri with massive processions and devotional songs.</p>
+        <img src="https://c.ndtvimg.com/2024-07/qrfq0ui_rath-yatra_625x300_07_July_24.jpeg" class="img-fluid rounded" alt="Rath Yatra">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal for Navaratri -->
+<div class="modal fade" id="navaratriModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-golden">
+        <h5 class="modal-title">🌸 Navaratri</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Navaratri is a nine‑night festival dedicated to Goddess Durga, celebrated with vibrant dances, rituals, and devotion at Meenakshi Temple.</p>
+        <img src="https://static.toiimg.com/thumb/msid-54706592,width-400,height-225,resizemode-72/54706592.jpg" class="img-fluid rounded" alt="Navaratri">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal for Brahmotsavam -->
+<div class="modal fade" id="brahmotsavamModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-golden">
+        <h5 class="modal-title">🙏 Brahmotsavam</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Brahmotsavam is the grand annual festival at Tirupati Balaji, featuring processions, rituals, and devotional celebrations that attract millions of pilgrims.</p>
+        <img src="https://holaciti.com/assets/Articles/1753581326_68uFCbY8rr.webp" class="img-fluid rounded" alt="Brahmotsavam">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Script -->
+<script>
+let selectedTemple = "all";
+
+function filterFestival(temple) {
+  selectedTemple = temple;
+  applyFilters();
+}
+
+function applyFilters() {
+  const selectedMonth = document.getElementById("monthSelect").value;
+  const searchInput = document.getElementById("searchInput").value.toLowerCase();
+  const rows = document.querySelectorAll(".festival-calendar table tr");
+
+  rows.forEach((row, index) => {
+    if (index === 0) return; // skip header
+    const festivalCell = row.cells[0].innerText.toLowerCase();
+    const templeCell = row.cells[1].innerText;
+    const dateCell = row.cells[2].innerText;
+
+    const matchesTemple = (selectedTemple === "all" || templeCell === selectedTemple);
+    const matchesMonth = (selectedMonth === "all" || dateCell.includes(selectedMonth));
+    const matchesSearch = (festivalCell.includes(searchInput) || templeCell.toLowerCase().includes(searchInput));
+
+    if (matchesTemple && matchesMonth && matchesSearch) {
+      row.classList.remove("hide");
+      row.classList.add("show");
+      row.style.display = "";
+    } else {
+      row.classList.remove("show");
+      row.classList.add("hide");
+    }
+  });
+}
+
+
+function sortTable(compareFn) {
+  const table = document.getElementById("festivalTable");
+  const rows = Array.from(table.rows).slice(1); // skip header row
+
+  rows.sort(compareFn);
+
+  rows.forEach(row => table.appendChild(row)); // reattach in new order
+}
+
+function sortByDate() {
+  sortTable((a, b) => {
+    const dateA = new Date(a.querySelector("[data-date]").getAttribute("data-date"));
+    const dateB = new Date(b.querySelector("[data-date]").getAttribute("data-date"));
+    return dateA - dateB;
+  });
+}
+
+function sortByTemple() {
+  sortTable((a, b) => {
+    const templeA = a.cells[1].innerText.toLowerCase();
+    const templeB = b.cells[1].innerText.toLowerCase();
+    return templeA.localeCompare(templeB);
+  });
+};
+
+
+function highlightFestivalOfMonth() {
+  const rows = document.querySelectorAll('#festivalTable tr');
+  const now = new Date();
+  const currentMonth = now.getMonth(); // 0 = Jan, 1 = Feb, etc.
+
+  rows.forEach(row => {
+    const dateCell = row.querySelector('[data-date]');
+    if (dateCell) {
+      const festivalDate = new Date(dateCell.getAttribute('data-date'));
+      if (festivalDate.getMonth() === currentMonth) {
+        row.classList.add('festival-highlight');
+        // Optional: add a badge
+        const festivalCell = row.cells[0];
+        festivalCell.innerHTML += " 🌟 Festival of the Month";
+      }
+    }
+  });
+}
+
+highlightFestivalOfMonth();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,519 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fdf6e3;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #fdf6e3, #fff);
+
+}
+
+header h1, .temple-listings h2, .temple-details h2 {
+  font-family: 'Merriweather', serif;
+}
+
+header {
+  background-color: #8b4513;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav {
+  position: sticky;       /* Stays visible while scrolling */
+  top: 0;
+  background: #8b4513;    /* Deep temple-inspired brown */
+  padding: 12px 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: goldenrod;       /* Elegant hover effect */
+  transform: scale(1.1);  /* Slight zoom on hover */
+}
+.temple-listings {
+  padding: 20px;
+}
+.temple-listings h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #8b4513;
+  margin-bottom: 20px;
+  font-weight: bold;
+
+  /* Decorative underline */
+  position: relative;
+}
+
+.temple-listings h2::after {
+  content: "";
+  display: block;
+  width: 60px;              /* length of underline */
+  height: 3px;              /* thickness */
+  background: goldenrod;    /* color */
+  margin: 8px auto 0;       /* center it below text */
+  border-radius: 2px;       /* rounded edges */
+}
+.temple-listings-heading {
+  text-align: center;
+}
+
+.temple-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.temple-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 220px;
+  background: #fff;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.temple-card:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.temple-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.temple-details {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.temple-details h2 {
+  text-align: center;
+  color: #8b4513;
+  margin-bottom: 15px;
+}
+
+.temple-details img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.back-home {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.back-home a {
+  background-color: goldenrod;   /* Temple-inspired golden color */
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', sans-serif;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-home a:hover {
+  background-color: #daa520;     /* Slightly darker gold on hover */
+  transform: scale(1.05);        /* Subtle zoom effect */
+}
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 600px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(139,69,19,0.8);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel .prev {
+  left: 10px;
+}
+
+.carousel .next {
+  right: 10px;
+}
+
+.carousel button:hover {
+  background: goldenrod;
+}
+.carousel img {
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+.temple-card h3 {
+  font-family: 'Georgia', serif; /* Elegant serif font */
+  font-size: 20px;
+  color: #8b4513; /* Deep temple-inspired brown */
+  margin-bottom: 8px;
+}
+
+.temple-card p {
+  font-family: 'Trebuchet MS', sans-serif; /* Clean modern font */
+  font-size: 15px;
+  color: #444; /* Softer dark gray instead of plain black */
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.temple-card p strong {
+  color: goldenrod; /* Highlight important words */
+}
+.temple-details h3 {
+  font-family: 'Georgia', serif;   /* Elegant serif font */
+  font-size: 22px;
+  color: #8b4513;                  /* Temple-inspired deep brown */
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border-left: 4px solid goldenrod; /* Golden accent line */
+  padding-left: 10px;
+}
+
+.temple-details p {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Section */
+.festival-calendar {
+  margin: 40px auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+.festival-calendar h2 {
+  color: #8b4513;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+/* Table */
+.festival-calendar table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.festival-calendar th, .festival-calendar td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.festival-calendar th {
+  background: goldenrod;
+  color: white;
+  font-size: 16px;
+}
+
+.festival-calendar td {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Hover effect */
+.festival-calendar tr:hover {
+  background: #fdf6e3;
+  transform: scale(1.02);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Badges */
+.festival-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+}
+
+.festival-badge.shivratri { background: #6a5acd; }
+.festival-badge.rath { background: #ff4500; }
+.festival-badge.navaratri { background: #e91e63; }
+.festival-badge.brahmotsavam { background: #228b22; }
+
+/* Controls Layout */
+.festival-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Temple Filter Buttons */
+.festival-filters button {
+  background-color: goldenrod;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.festival-filters button:hover {
+  background-color: #daa520;
+  transform: scale(1.05);
+}
+
+/* Month Dropdown */
+.month-filter select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid goldenrod;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.month-filter select:hover {
+  border-color: #daa520;
+}
+
+/* Search Bar */
+.festival-search input {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid goldenrod;
+  width: 250px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.festival-search input:focus {
+  border-color: #daa520;
+  box-shadow: 0 0 6px rgba(218,165,32,0.6);
+  outline: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(10px); }
+}
+
+.festival-calendar tr.show {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.festival-calendar tr.hide {
+  animation: fadeOut 0.3s ease forwards;
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .festival-calendar {
+    max-width: 95%;
+    font-size: 14px;
+  }
+
+  .festival-calendar table, 
+  .festival-calendar th, 
+  .festival-calendar td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .festival-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .festival-filters button {
+    padding: 6px 12px;
+    margin: 3px;
+    font-size: 12px;
+  }
+
+  .month-filter select, 
+  .festival-search input {
+    width: 90%;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .festival-calendar table {
+    display: block;
+    overflow-x: auto;   /* Horizontal scroll for small screens */
+    white-space: nowrap;
+  }
+
+  .festival-calendar th, 
+  .festival-calendar td {
+    font-size: 11px;
+    padding: 6px;
+  }
+
+  .festival-badge {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+.temple-icon {
+  margin-right: 6px;
+  font-size: 16px;
+  color: goldenrod;
+}
+
+.bg-golden {
+  background-color: goldenrod;
+  color: white;
+}
+
+.img-fluid rounded{
+  text-align: center;
+}
+
+.festival-highlight {
+  background-color: gold;
+  font-weight: bold;
+  border: 2px solid orange;
+}
+
+/* Mobile first (default styles) */
+body {
+  font-size: 14px;
+}
+
+/* Tablet screens (≥768px) */
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .festival-table {
+    font-size: 15px;
+  }
+}
+
+/* Desktop screens (≥1024px) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  .festival-table {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .festival-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    display: block;
+    text-align: center;
+  }
+  section {
+    margin-bottom: 20px;
+  }
+}
+.temple-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.temple-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.temple-card h3 {
+  font-family: 'Georgia', serif;
+  font-size: 1.4rem;
+  color: #b8860b; /* golden accent */
+  margin-bottom: 10px;
+}
+
+.temple-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+.temple-card .badge {
+  background-color: #b8860b;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
